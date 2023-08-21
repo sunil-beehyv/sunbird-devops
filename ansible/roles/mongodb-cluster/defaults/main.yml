@@ -2,7 +2,7 @@
 
 mongodb_package: mongodb-org
 mongodb_package_state: present
-mongodb_version: "4.4"
+mongodb_version: "5.0"
 mongodb_apt_keyserver: keyserver.ubuntu.com
 mongodb_apt_key_id:
   "3.6": "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
