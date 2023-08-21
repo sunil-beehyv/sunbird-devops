@@ -40,7 +40,7 @@
   when: ansible_os_family == 'Debian'
 
 - name: register open_jdk version
-  shell: java -version 2>&1 | grep OpenJDK
+  shell: java --version 2>&1 | grep OpenJDK
   register: open_jdk
   ignore_errors: yes
   changed_when: false
