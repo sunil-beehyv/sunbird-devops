@@ -1,5 +1,5 @@
 import urllib.request , urllib.error, json, logging
-from retrying import retry
+from retry import retry
 
 logging.basicConfig()
 
