@@ -1,4 +1,4 @@
-import urllib.request , urllib.error, json, logging
+import urllib2, urllib.request , urllib.error, json, logging
 from retry import retry
 
 logging.basicConfig()
@@ -38,4 +38,4 @@ def json_request(method, url, data=None):
 
 @retry(exceptions=urllib.error.URLError, tries=5, delay=2, backoff=2)
 def retrying_urlopen(*args, **kwargs):
-    return urllib.request.urlopen(*args, **kwargs)
+    return urllib2.urlopen(*args, **kwargs)
