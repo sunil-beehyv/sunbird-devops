@@ -1,4 +1,4 @@
-import urllib.request, urllib.error, argparse, json, csv
+import urllib2, urllib.request, urllib.error, argparse, json, csv
 
 from common import get_apis, json_request
 
