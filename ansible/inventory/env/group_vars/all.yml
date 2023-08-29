@@ -1,5 +1,5 @@
 ###################### Core ############################
-
+sunbird_private_storage_account_key: "{{ cloud_management_storage_secret }}"
 # ENVIRONMENT CONFIGURATION
 proxy_server_name: "{{domain_name}}"
 keycloak_auth_server_url: "{{proto}}://{{ proxy_server_name }}/auth"
