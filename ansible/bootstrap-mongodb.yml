@@ -15,6 +15,6 @@
            dest: /tmp/nodebb.js
         - name: Init nodebb db
           shell: |-
-            mongo < /tmp/nodebb.js
+            mongosh < /tmp/nodebb.js
       tags: 
         - nodebb
