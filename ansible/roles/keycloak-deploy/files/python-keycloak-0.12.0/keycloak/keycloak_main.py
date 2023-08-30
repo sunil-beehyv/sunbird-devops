@@ -83,7 +83,7 @@ if  __name__ == "__main__":
     # If keycloak is returning the error realm does exists
     except Exception as e:
         if "409" in str(e):
-            print "Skipping error: " + str(e)
+            print ("Skipping error: " + str(e))
         else:
             raise
 
