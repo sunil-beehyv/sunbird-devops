@@ -52,7 +52,9 @@ metadata:
 {{ toYaml .Values.annotations | indent 4 }}
 spec:
   type: {{ .Values.nginx_private_ingress_type }}
-  clusterIP: {{ .Values.nginx_private_ingress_ip }}
+{{- if and .Values.nginx_private_ingress_ip (ne .Values.nginx_private_ingress_type "NodePort") }}
+  loadBalancerIP: {{ .Values.nginx_private_ingress_ip }}
+{{- end }}
   ports:
   - port: 80
     nodePort: 31480
