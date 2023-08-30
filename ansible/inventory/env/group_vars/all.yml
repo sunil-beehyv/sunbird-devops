@@ -1,5 +1,5 @@
 ###################### Core ############################
-
+sunbird_content_azure_storage_container: {{ cloud_storage_content_bucketname }}
 # ENVIRONMENT CONFIGURATION
 proxy_server_name: "{{domain_name}}"
 keycloak_auth_server_url: "{{proto}}://{{ proxy_server_name }}/auth"
