@@ -52,6 +52,8 @@ metadata:
 {{ toYaml .Values.annotations | indent 4 }}
 spec:
   type: {{ .Values.nginx_private_ingress_type }}
+  externalIPs:
+  - 192.168.86.20
   ports:
   - port: 80
     nodePort: 31480
