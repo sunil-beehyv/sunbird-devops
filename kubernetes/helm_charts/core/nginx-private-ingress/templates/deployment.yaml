@@ -41,8 +41,7 @@ spec:
             secretName: htpasswd
         - name: config-volume
           configMap:
-            name: nginx-private-ingress.conf
-      hostNetwork: false      
+            name: nginx-private-ingress.conf     
 ---
 apiVersion: v1
 kind: Service
