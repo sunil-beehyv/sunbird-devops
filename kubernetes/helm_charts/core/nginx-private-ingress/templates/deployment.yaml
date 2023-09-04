@@ -53,7 +53,8 @@ metadata:
 spec:
   type: {{ .Values.nginx_private_ingress_type }}
 {{- if and .Values.nginx_private_ingress_ip (ne .Values.nginx_private_ingress_type "NodePort") }}
-  loadBalancerIP: {{ .Values.nginx_private_ingress_ip }}
+  externalIPs: 
+    - {{ .Values.nginx_private_ingress_ip }}
 {{- end }}
   ports:
   - port: 80
