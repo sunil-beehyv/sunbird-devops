@@ -21,10 +21,7 @@ def save_apis(kong_admin_api_url, input_apis):
 
     for input_api in input_apis_to_be_created:
         print("Adding API {}".format(input_api["name"]))
-        api_data = _sanitized_api_data(input_api)
-        api_data_bytes = json.dumps(api_data).encode('utf-8')
-        api_data_str = api_data_bytes.decode('utf-8')
-        json_request("POST", apis_url, api_data_str)
+        json_request("POST", apis_url, _sanitized_api_data(input_api))
 
     for input_api in input_apis_to_be_updated:
         print("Updating API {}".format(input_api["name"]))
