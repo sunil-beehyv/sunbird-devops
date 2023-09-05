@@ -28,7 +28,7 @@ def get_api_plugins(kong_admin_api_url, api_name):
 
 
 def json_request(method, url, data=None):
-    request_body = json.dumps(data) if data is not None else None
+    request_body = json.dumps(data).encode('utf-8') if data is not None else None
     request = urllib.request.Request(url, request_body)
     if data:
         request.add_header('Content-Type', 'application/json')
