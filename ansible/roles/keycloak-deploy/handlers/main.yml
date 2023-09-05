@@ -21,7 +21,7 @@
 
 - name: wait for keycloak to start
   uri:
-    url: "http://{{ inventory_hostname }}:8080/auth/"
+    url: "http://{{ inventory_hostname }}:8081/auth/"
     method: GET
   register: _result
   until: _result.status == 200
