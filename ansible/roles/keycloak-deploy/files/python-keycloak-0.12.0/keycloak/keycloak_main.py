@@ -1,7 +1,7 @@
 import json
 
-from keycloak.abc import KeycloakOpenID
-from keycloak.abc import KeycloakAdmin
+from keycloak.keycloak_openid import KeycloakOpenID
+from keycloak import KeycloakAdmin
 import urllib2, argparse, json
 
 # Import realm
