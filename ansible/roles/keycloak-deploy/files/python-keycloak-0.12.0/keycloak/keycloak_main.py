@@ -1,6 +1,6 @@
 import json
 
-from keycloak.keycloak_openid import KeycloakOpenID
+from keycloak import KeycloakOpenID
 from keycloak import KeycloakAdmin
 import urllib2, argparse, json
 
