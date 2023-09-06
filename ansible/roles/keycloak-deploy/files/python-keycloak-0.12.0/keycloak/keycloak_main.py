@@ -2,7 +2,7 @@ import json
 
 from keycloak import KeycloakOpenID
 from keycloak import KeycloakAdmin
-import urllib2, argparse, json
+import urllib.request, argparse, json
 
 # Import realm
 def keycloak_import_realm(keycloak_realm_file):
