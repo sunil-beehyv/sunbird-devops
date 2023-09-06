@@ -8,7 +8,7 @@
 
 - name: wait for keycloak to stop
   wait_for:
-    port: 8081
+    port: 8088
     state: stopped
     delay: 5
     sleep: 5
@@ -21,7 +21,7 @@
 
 - name: wait for keycloak to start
   uri:
-    url: "http://{{ inventory_hostname }}:8081/auth/"
+    url: "http://{{ inventory_hostname }}:8088/auth/"
     method: GET
   register: _result
   until: _result.status == 200
