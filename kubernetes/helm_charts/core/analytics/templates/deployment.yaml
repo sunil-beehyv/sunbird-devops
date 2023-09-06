@@ -29,21 +29,19 @@ spec:
         image: "{{ .Values.dockerhub }}/{{ .Values.repository }}:{{ .Values.image_tag }}"
         imagePullPolicy: Always
         env:
-        - name: CLOUD_STORAGE_TYPE
-          value: "aws"
         - name: JAVA_OPTIONS
           value: {{ .Values.env.javaoptions | quote }}
         - name: MIN_HEAP
           value: {{ .Values.env.min_heap | quote }}
         - name: MAX_HEAP
           value: {{ .Values.env.max_heap | quote }}
-        - name: AWS_SECRET_ACCESS_KEY
+        - name: azure_private_account_secret
           value: {{ .Values.env.azure_private_account_secret | quote }}
-        - name: AWS_PRIVATE_S3_BUCKET
+        - name: azure_private_account_name
           value: {{ .Values.env.azure_private_account_name | quote }}
-        - name: AWS_SECRET_ACCESS_KEY
+        - name: azure_public_account_secret
           value: {{ .Values.env.azure_public_account_secret | quote }}
-        - name: AWS_PUBLIC_S3_BUCKET
+        - name: azure_public_account_name
           value: {{ .Values.env.azure_public_account_name | quote }}
         - name: _JAVA_OPTIONS
           value: -Dlog4j2.formatMsgNoLookups=true
