@@ -30,7 +30,7 @@ spec:
         imagePullPolicy: Always
         env:
         - name: CLOUD_STORAGE_TYPE
-          value: aws
+          value: "aws"
         - name: JAVA_OPTIONS
           value: {{ .Values.env.javaoptions | quote }}
         - name: MIN_HEAP
